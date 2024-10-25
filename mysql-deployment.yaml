@@ -6,7 +6,7 @@ metadata:
   labels:
     app: mysql
 spec:
-  replicas: 1  
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -23,3 +23,6 @@ spec:
           value: "password"
         ports:
         - containerPort: 3306
+      imagePullSecrets:                    
+      - name: ecr-registry-secret-mysql     
+

@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: webapp
+  name: webapp-sar
+  namespace: webapp-namespace 
   labels:
-    app: webapp
+    app: webapp-sar
 spec:
   containers:
   - name: webapp
     image: 064686496891.dkr.ecr.us-east-1.amazonaws.com/my-app-image:latest
     ports:
     - containerPort: 80
+

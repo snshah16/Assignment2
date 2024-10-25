@@ -4,12 +4,22 @@ metadata:
   name: webapp-sar
   namespace: webapp-namespace
   labels:
-    app: webapp
+    app: employees  
 spec:
   containers:
   - name: webapp
     image: 064686496891.dkr.ecr.us-east-1.amazonaws.com/my-app-image:latest
+    env:
+    - name: DB_HOST
+      value: "mysql-service.mysql-namespace.svc.cluster.local"  
+    - name: DB_PORT
+      value: "3306"
+    - name: DB_USER
+      value: "root"
+    - name: DB_PASSWORD
+      value: "password"
     ports:
     - containerPort: 80
   imagePullSecrets:
   - name: ecr-registry-secret  
+ 

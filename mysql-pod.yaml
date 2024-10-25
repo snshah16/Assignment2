@@ -1,9 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql
+  name: mysql-sar
+  namespace: mysql-namespace  # Add this line to specify the namespace
   labels:
-    app: mysql
+    app: mysql-sar
 spec:
   containers:
   - name: mysql

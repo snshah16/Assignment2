@@ -19,13 +19,13 @@ spec:
       - name: webapp
         image: 064686496891.dkr.ecr.us-east-1.amazonaws.com/my-app-image:latest
         env:
-        - name: DB_HOST
+        - name: DBHOST
           value: "my-mysql-container.mysql-namespace.svc.cluster.local"  
-        - name: DB_PORT
+        - name: DBPORT
           value: "3306"
-        - name: DB_USER
+        - name: DBUSER
           value: "root"
-        - name: DB_PASSWORD
+        - name: DBPWD
           value: "password"
         ports:
         - containerPort: 80

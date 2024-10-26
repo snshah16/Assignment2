@@ -28,6 +28,6 @@ spec:
         - name: DBPWD
           value: "password"
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       imagePullSecrets:
       - name: ecr-registry-secret  
